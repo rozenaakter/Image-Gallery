@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="time"></div>
+    <div class="product">
+        <div class="product_img">
+            <img src="./img/download1.jpg" alt="shirtImg" onclick="myFunction(this)">
+            <img src="./img/download2.jpg" alt="shirtImg" onclick="myFunction(this)">
+            <img src="./img/download3.jpg" alt="shirtImg" onclick="myFunction(this)">
+            <img src="./img/download4.jpg" alt="shirtImg" onclick="myFunction(this)">
+        </div>
+
+        <div class="img_container">
+            <img id="imgBox" src="./img/download1.jpg" alt="">
+        </div>
+
+    </div>
+
+
+    <script>
+        // function setInterval(() => {
+            let time = document.getElementById('time');
+        time.style.fontSize = '35px'
+        time.innerHTML = new Date();
+        // },1000);
+           
+        
+    
+        function myFunction(smallimg){
+            var fullimg = document.getElementById('imgBox');
+            fullimg.src = smallimg.src;
+        }
+    </script>
+</body>
+</html>
